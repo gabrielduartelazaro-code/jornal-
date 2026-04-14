@@ -1,0 +1,13 @@
+<h1>Comentários - {{ artigo.titulo }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <textarea name="texto"></textarea>
+    <button type="submit">Comentar</button>
+</form>
+
+<ul>
+{% for comentario in comentarios %}
+    <li>{{ comentario.texto }}</li>
+{% endfor %}
+</ul>

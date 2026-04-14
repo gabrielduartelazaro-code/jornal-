@@ -1,0 +1,9 @@
+<h1>Artigos</h1>
+
+<ul>
+{% for artigo in artigos %}
+    <li>
+        <a href="/artigo/{{ artigo.id }}/">{{ artigo.titulo }}</a>
+    </li>
+{% endfor %}
+</ul>
